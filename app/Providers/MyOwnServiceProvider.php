@@ -14,7 +14,7 @@ class MyOwnServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('redis.settings.service', function () {
+        $this->app->singleton('redis.settings.service', function () {
             return new RedisSettingsService();
         });
     }
