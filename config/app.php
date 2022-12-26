@@ -195,6 +195,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Custom
+         */
+        \App\Providers\MyOwnServiceProvider::class,
+
     ],
 
     /*
@@ -209,6 +214,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'RedisSettings' => \App\Facades\RedisServiceFacade::class,
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
